@@ -1,0 +1,15 @@
+<!doctype html><html lang="zh-Hant"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>AI 幻覺與查證｜LLM Wiki</title><style>
+body{margin:0;color:#17304a;background:#f5f8fb;font:1.05rem/1.75 system-ui,sans-serif}header{background:#14263c;color:white;padding:2rem max(1rem,calc((100vw - 58rem)/2))}main{max-width:58rem;margin:auto;padding:1.3rem}h1,h2{line-height:1.2}a{color:#086b61}.flow{display:flex;flex-wrap:wrap;gap:.6rem;list-style:none;padding:0}.flow li{background:#d9f2ea;padding:.5rem 1rem;border-radius:.4rem}table{border-collapse:collapse;width:100%}td,th{padding:.65rem;border:1px solid #c4d4e4;text-align:left;vertical-align:top}th{background:#e7eff7}summary{cursor:pointer;font-weight:bold}blockquote{margin:1rem 0;border-left:4px solid #087c72;padding:.5rem 1rem;background:white}</style>
+<header><p>LLM Wiki · AI 知識探索百科</p><h1>AI 幻覺與查證</h1><p>如何把一則 AI 回答拆成可以逐項核對的說法。</p></header><main>
+<h2>什麼是 AI 幻覺？</h2><p>AI 有時會生成看似合理的錯誤內容，例如提供不存在的論文，或把前一年度的招生日期當成今年的日期。看到具體日期、文件名稱或引文時，可以回到原始資料核對。</p>
+<h2>查證流程</h2><ol class="flow"><li>1. 拆出主張</li><li>2. 找原始來源</li><li>3. 核對來源和原文</li><li>4. 記錄結果</li></ol>
+<p>先比對來源的發布單位、日期、版本和適用條件。資料不適用時回到第 2 步。原文支持就採用並附來源，矛盾就依原文修正，證據不足時再找來源或標記待查證。記完一項後，回到第 2 步處理下一項。</p>
+<h2>練習：招生回答</h2><blockquote>某大學資管所今年 11 月 30 日截止報名，所有考生都要交推薦函。<br>（模擬回答）</blockquote>
+<details><summary>揭曉兩項查證任務</summary><p>截止時間查當年度的報名時程，推薦函要求查系所分則。兩項都要確認學校、系所、招生年度與招生管道，再看有無更新公告。</p></details>
+<h2>實際查證紀錄</h2><p>2026 年 11 月 21 日以 NIST AI 600-1 為例，將兩項測試主張逐一與 NIST 官方出版資料比對。</p>
+<table><thead><tr><th>測試主張</th><th>實際查到的證據</th><th>結果</th></tr></thead><tbody>
+<tr><td>文件編號為 NIST AI 600-1</td><td>官方出版頁列出的 DOI 為 10.6028/NIST.AI.600-1。</td><td>支持</td></tr>
+<tr><td>文件於 2025 年出版</td><td>官方出版頁的建議引用年份為 2024 年。</td><td>矛盾，修正為 2024 年</td></tr>
+</tbody></table>
+<h2>反思</h2><p>這次最容易漏掉的是「比原文」節點。找到名稱相符的官方文件後，仍可能直接照抄 AI 提供的年份。我把檢查拆成兩關：先核對文件編號與來源，再逐項對照官方頁面上對應的欄位。結論旁另外記下證據位置，讓其他人能重做查證。</p>
+<h2>參考資料</h2><ul><li><a href="https://www.nist.gov/publications/artificial-intelligence-risk-management-framework-generative-artificial-intelligence">NIST AI 600-1 官方出版資料（2024）</a></li><li><a href="https://openai.com/index/why-language-models-hallucinate/">Why language models hallucinate（2025）</a></li></ul></main></html>
